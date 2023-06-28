@@ -1,28 +1,92 @@
+/* 
+This is master CSS
+*/
+
+/*layout*/
+
+
+
+/*style*/
+
 html{
   background-color: yellow;
 }
 
-header{
-  color: white;
-  background-color: green;
-  font-size: 30px;
+body{
+    /*layout*/
+    width: 800px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: grid;
+    grid-template:
+    "... ...... ...... ...... ...... ...... ..."
+    "... header header header header header ..." 200px
+    "... ...... ...... ...... ...... ...... ..."
+    "... left   ...... center ...... right  ..." 1fr
+    "... ...... ...... ...... ...... ...... ..."
+    "... footer footer footer footer footer ..." 200px
+    "... ...... ...... ...... ...... ...... ..."
+    / auto auto auto 1fr auto auto auto  
+    ;
 }
+
+header{
+    /*layout*/
+    grid-area: header;
+    /*style*/
+    color: white;
+    background-color: green;
+    font-size: 30px;
+}
+
 
 nav{
-
-  
+    grid-area: left;
+    /*style*/
+    color: black;
+    background-color: #ccffff;
+    font-size: 30px;
 }
 
-main{
 
+main{
+    grid-area: center;
+
+}
+
+aside{
+    grid-area: right;
+    /*style*/
+    color: black;
+    background-color: #ccffff;
+    font-size: 30px;
 }
 
 footer{
-  
+    grid-area: footer;
+
+    color: #FF1600;
+    background-color: antiquewhite;
+    font-size: 30px;
 }
 
 div{
-  color: #FF1600;
-  background-color: antiquewhite;
-  font-size: 30px;
+    color: rgba(0, 225, 150, 20);
+    background-color:  rgba(0, 225, 150, 20);
+    font-size: 30px;
+    margin: 0 0 0 0 ; /*top left bottom right*/
+}
+
+H1{
+    color: black;
+    /* background-color:  rgba(0, 225, 150, 20); */
+    font-size: 30px;
+    margin: 0 0 0 0 ; /*top left bottom right*/
+}
+
+.title{
+
+
+
+
 }
