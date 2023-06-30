@@ -93,3 +93,69 @@ H1{
 }
 
 
+
+/* for hamburger menu */
+.opne_sidemenu,
+.close_sidemenu{
+    /* PCでは不要の為非表示 */
+    display: none;
+}
+
+input[type="checkbox"]{
+    position: absolute;
+    left: -50vw;
+}
+
+
+/* 可変対応 */
+@media screen and (max-width: 1000px){
+    
+    main{
+        width: 100%;
+        padding-top: 50px; ???
+    }
+
+    /* for hamburger menu */
+    .opne_sidemenu,
+    .close_sidemenu{
+        display: block;
+        font-size: 30px;
+    }
+    .opne_sidemenu{
+        position: absolute;
+    }
+    
+    aside{
+        position:absolute;
+        left: -200px;
+        height: 100%;
+        transition: all 0.2s;
+        background: #ffffff;
+    }
+
+    /* サイドバーの表示非表示 */
+    input[type="checkbox"]:checked ~ aside{
+        left: 0px;
+    }
+
+    /* input[type="checkbox"]:checked ~ .back_sidemenu{
+        left: 0px;
+    } */
+    
+    input[type="checkbox"]:checked ~ .back_sidemenu{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0,0.6);
+    }
+    
+
+
+
+}
+
+
+
+}
+
+
